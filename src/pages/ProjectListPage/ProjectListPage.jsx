@@ -1,11 +1,22 @@
 import React from "react";
+import "./ProjectListPage.css";
+import ProjectListItem from "../../components/ProjectListItem/ProjectListItem";
 
-const ProjectListPage = props => {
+function ProjectListPage(props) {
   return (
-    <div>
+    <>
       <h1>Projects</h1>
-    </div>
+      <div className="ProjectListPage-grid">
+        {props.projects.map(project => (
+          <ProjectListItem
+            project={project}
+            handleDeleteProject={props.handleDeleteProject}
+            key={project._id}
+          />
+        ))}
+      </div>
+    </>
   );
-};
+}
 
 export default ProjectListPage;

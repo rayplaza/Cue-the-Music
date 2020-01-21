@@ -1,6 +1,6 @@
-import React, { Componenet } from "react";
+import React, { Component } from "react";
 
-class AddProjectPage extends Componenet {
+class AddProjectPage extends Component {
   state = {
     invalidForm: true,
     formData: {
@@ -13,6 +13,8 @@ class AddProjectPage extends Componenet {
       cues: []
     }
   };
+
+  formRef = React.createRef();
 }
 
 export default AddProjectPage;
