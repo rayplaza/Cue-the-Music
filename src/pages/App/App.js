@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import { Route, Redirect, Switch } from "react-router-dom";
 import ProjectListPage from "../../pages/ProjectListPage/ProjectListPage";
 import MainPage from "../MainPage/MainPage";
@@ -29,6 +31,7 @@ class App extends Component {
     return (
       <div>
         <NavBar user={this.state.user} handleLogout={this.handleLogout} />
+        <ToastContainer />
         <Switch>
           <Route exact path="/" render={() => <MainPage />} />
           <Route

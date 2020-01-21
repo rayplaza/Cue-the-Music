@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./LoginPage.css";
 import userService from "../../utils/userService";
 
@@ -20,7 +21,7 @@ class LoginPage extends Component {
       this.props.handleSignUpOrLogin();
       this.props.history.push("/projects");
     } catch (err) {
-      alert("Invalid Credentials!");
+      toast.error("Invalid Credentials!");
     }
   };
 
