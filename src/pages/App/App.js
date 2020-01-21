@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Route, Redirect, Switch } from "react-router-dom";
 import ProjectListPage from "../../pages/ProjectListPage/ProjectListPage";
@@ -7,6 +6,7 @@ import MainPage from "../MainPage/MainPage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
+import NavBar from "../../components/NavBar/NavBar";
 
 class App extends Component {
   constructor() {
@@ -28,17 +28,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavBar user={this.state.user} handleLogout={this.handleLogout} />
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <MainPage
-                user={this.state.user}
-                handleLogout={this.handleLogout}
-              />
-            )}
-          />
+          <Route exact path="/" render={() => <MainPage />} />
           <Route
             exact
             path="/projects"
