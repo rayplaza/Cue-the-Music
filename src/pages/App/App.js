@@ -31,9 +31,9 @@ class App extends Component {
     const newProj = await projectAPI.create(newProjData);
     this.setState(
       state => ({
-        projects: [...state.puppies, newProj]
+        projects: [...state.projects, newProj]
       }),
-      () => this.props.history.push("/")
+      () => this.props.history.push("/projects")
     );
   };
 

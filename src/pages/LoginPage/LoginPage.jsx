@@ -18,7 +18,7 @@ class LoginPage extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      this.props.handleSignUpOrLogin();
+      this.props.handleSignupOrLogin();
       this.props.history.push("/projects");
     } catch (err) {
       toast.error("Invalid Credentials!");

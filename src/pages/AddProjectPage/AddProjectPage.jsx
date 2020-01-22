@@ -7,7 +7,7 @@ class AddProjectPage extends Component {
       projectTitle: "",
       episodeTitle: "",
       seriesType: "",
-      episodeNum: "0",
+      episodeNum: "",
       length: "",
       network: "",
       cues: []
@@ -45,7 +45,7 @@ class AddProjectPage extends Component {
             <label>Project Title (required)</label>
             <input
               className="form-control"
-              projectTitle="projectTitle"
+              name="projectTitle"
               value={this.state.formData.projectTitle}
               onChange={this.handleChange}
               required
@@ -55,7 +55,7 @@ class AddProjectPage extends Component {
             <label>Episode Title</label>
             <input
               className="form-control"
-              episodeTitle="episodeTitle"
+              name="episodeTitle"
               value={this.state.formData.episodeTitle}
               onChange={this.handleChange}
             />
@@ -64,7 +64,7 @@ class AddProjectPage extends Component {
             <label>Series Type</label>
             <input
               className="form-control"
-              seriesType="seriesType"
+              name="seriesType"
               value={this.state.formData.seriesType}
               onChange={this.handleChange}
             />
@@ -73,7 +73,7 @@ class AddProjectPage extends Component {
             <label>Episode Number</label>
             <input
               className="form-control"
-              episodeNum="episodeNum"
+              name="episodeNum"
               value={this.state.formData.episodeNum}
               onChange={this.handleChange}
             />
@@ -82,7 +82,7 @@ class AddProjectPage extends Component {
             <label>Length</label>
             <input
               className="form-control"
-              length="length"
+              name="length"
               value={this.state.formData.length}
               onChange={this.handleChange}
             />
@@ -91,11 +91,18 @@ class AddProjectPage extends Component {
             <label>Network</label>
             <input
               className="form-control"
-              network="network"
+              name="network"
               value={this.state.formData.network}
               onChange={this.handleChange}
             />
           </div>
+          <button
+            type="submit"
+            className="btn"
+            disabled={this.state.invalidForm}
+          >
+            Add Project
+          </button>
         </form>
       </>
     );

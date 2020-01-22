@@ -1,7 +1,19 @@
+import tokenService from "./tokenService";
+
 const BASE_URL = "/api/projects";
+// export function getAll() {
+//   return fetch(BASE_URL).then(res => res.json());
+// }
 
 export function getAll() {
-  return fetch(BASE_URL).then(res => res.json());
+  //   const auth = "Authorization";
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + tokenService.getToken()
+    }
+  };
+  return fetch(BASE_URL, options).then(res => res.json());
 }
 
 export function create(proj) {
