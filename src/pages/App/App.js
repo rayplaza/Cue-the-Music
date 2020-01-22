@@ -6,6 +6,7 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import * as projectAPI from "../../utils/projectService";
 import ProjectListPage from "../../pages/ProjectListPage/ProjectListPage";
 import MainPage from "../MainPage/MainPage";
+import EditProjectPage from "../EditProjectPage/EditProjectPage";
 import AddProjectPage from "../../pages/AddProjectPage/AddProjectPage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
@@ -54,7 +55,7 @@ class App extends Component {
         // Yay, filter returns a NEW array
         project: state.projects.filter(p => p._id !== id)
       }),
-      () => this.props.history.push("/")
+      () => this.props.history.push("/projects")
     );
   };
 
@@ -91,6 +92,16 @@ class App extends Component {
             path="/add"
             render={() => (
               <AddProjectPage handleAddProject={this.handleAddProject} />
+            )}
+          />
+          <Route
+            exact
+            path="/edit"
+            render={({ location }) => (
+              <EditProjectPage
+                handleUpdateProject={this.handleUpdateProject}
+                location={location}
+              />
             )}
           />
           <Route
