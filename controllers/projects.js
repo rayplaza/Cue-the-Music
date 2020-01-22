@@ -14,7 +14,7 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const projects = await Project.findById(req.params.id);
+  const project = await Project.findById(req.params.id);
   res.status(200).json(project);
 }
 

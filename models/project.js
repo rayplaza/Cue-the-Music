@@ -1,5 +1,19 @@
 const mongoose = require("mongoose");
 
+const cueSchema = new mongoose.Schema(
+  {
+    cueNum: Number,
+    composer: String,
+    timecodeIn: String,
+    timecodeOut: String,
+    totalTime: String,
+    notes: String
+  },
+  {
+    timestamps: true
+  }
+);
+
 const projectSchema = new mongoose.Schema(
   {
     projectTitle: String,
@@ -8,7 +22,7 @@ const projectSchema = new mongoose.Schema(
     episodeNum: String,
     length: String,
     network: String,
-    cues: []
+    cues: [cueSchema]
   },
   {
     timestamps: true

@@ -5,9 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { Route, Redirect, Switch } from "react-router-dom";
 import * as projectAPI from "../../utils/projectService";
 import ProjectListPage from "../../pages/ProjectListPage/ProjectListPage";
+import CueListPage from "../../pages/CueListPage/CueListPage";
 import MainPage from "../MainPage/MainPage";
 import EditProjectPage from "../EditProjectPage/EditProjectPage";
 import AddProjectPage from "../../pages/AddProjectPage/AddProjectPage";
+import AddCuePage from "../../pages/AddCuePage/AddCuePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
@@ -44,7 +46,7 @@ class App extends Component {
       p._id === updatedProject._id ? updatedProject : p
     );
     this.setState({ projects: newProjectsArray }, () =>
-      this.props.history.push("/")
+      this.props.history.push("/projects")
     );
   };
 
@@ -52,7 +54,6 @@ class App extends Component {
     await projectAPI.deleteOne(id);
     this.setState(
       state => ({
-        // Yay, filter returns a NEW array
         project: state.projects.filter(p => p._id !== id)
       }),
       () => this.props.history.push("/projects")
@@ -93,6 +94,16 @@ class App extends Component {
             render={() => (
               <AddProjectPage handleAddProject={this.handleAddProject} />
             )}
+          />
+          <Route
+            exact
+            path="/addCue"
+            render={({ location }) => <AddCuePage location={location} />}
+          />
+          <Route
+            exact
+            path="/cues"
+            render={({ location }) => <CueListPage location={location} />}
           />
           <Route
             exact

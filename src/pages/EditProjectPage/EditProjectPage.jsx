@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class EditProjectPage extends Component {
+  x = this.props.location.state.project;
   state = {
     invalidForm: false,
     formData: this.props.location.state.project
@@ -26,6 +27,7 @@ class EditProjectPage extends Component {
   };
 
   render() {
+    console.log("THIS IS X: ", this.x);
     return (
       <>
         <h1>Edit Project</h1>
