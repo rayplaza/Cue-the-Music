@@ -42,13 +42,58 @@ class AddProjectPage extends Component {
           onSubmit={this.handleSubmit}
         >
           <div className="form-group">
-            <label>Project Name (required)</label>
+            <label>Project Title (required)</label>
             <input
               className="form-control"
-              projectTitle="Name of Project"
+              projectTitle="projectTitle"
               value={this.state.formData.projectTitle}
               onChange={this.handleChange}
               required
+            />
+          </div>
+          <div className="form-group">
+            <label>Episode Title</label>
+            <input
+              className="form-control"
+              episodeTitle="episodeTitle"
+              value={this.state.formData.episodeTitle}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Series Type</label>
+            <input
+              className="form-control"
+              seriesType="seriesType"
+              value={this.state.formData.seriesType}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Episode Number</label>
+            <input
+              className="form-control"
+              episodeNum="episodeNum"
+              value={this.state.formData.episodeNum}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Length</label>
+            <input
+              className="form-control"
+              length="length"
+              value={this.state.formData.length}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Network</label>
+            <input
+              className="form-control"
+              network="network"
+              value={this.state.formData.network}
+              onChange={this.handleChange}
             />
           </div>
         </form>
