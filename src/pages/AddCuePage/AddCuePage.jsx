@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 class AddCuePage extends Component {
-  // checkLoc = () =>{
-  //     console.log(this.props.location.state.project)
-  // }
   state = {
     invalidForm: true,
     formData: {
@@ -14,7 +11,6 @@ class AddCuePage extends Component {
       totalTime: "",
       notes: ""
     }
-    // formData: this.props.location.state.project
   };
 
   formRef = React.createRef();

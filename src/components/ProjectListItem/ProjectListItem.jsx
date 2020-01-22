@@ -11,7 +11,8 @@ function ProjectListItem({ project, handleDeleteProject }) {
         <Link
           className="btn btn-xs btn-info"
           to={{
-            pathname: "/cues"
+            pathname: "/cues",
+            state: { project }
           }}
         >
           DETAILS

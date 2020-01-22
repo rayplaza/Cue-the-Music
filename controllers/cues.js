@@ -5,7 +5,8 @@ module.exports = {
 };
 
 async function create(req, res) {
-  // console.log()
-  const project = await Project.create(req.body);
-  res.status(201).json(project);
+  const project = await Project.findById(req.params.id);
+  project.cues.push(req.body.note);
+  project.save();
+  res.status(200).json(project.cues);
 }
