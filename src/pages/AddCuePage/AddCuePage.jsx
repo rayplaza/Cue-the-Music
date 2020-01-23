@@ -17,7 +17,7 @@ class AddCuePage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleAddProject(this.state.formData);
+    this.props.handleAddCue(this.state.formData);
   };
 
   handleChange = e => {

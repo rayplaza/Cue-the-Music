@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink, Route } from "react-router-dom";
-import AddProjectPage from "../../pages/AddProjectPage/AddProjectPage";
+import { NavLink } from "react-router-dom";
 import "./ProjectListPage.css";
 import ProjectListItem from "../../components/ProjectListItem/ProjectListItem";
 
@@ -20,11 +19,6 @@ function ProjectListPage(props) {
           />
         ))}
       </div>
-      <Route
-        exact
-        path="/add"
-        render={() => <AddProjectPage handleAddProject={this.handleAddPuppy} />}
-      />
     </>
   );
 }
