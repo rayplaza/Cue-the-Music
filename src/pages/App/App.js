@@ -52,7 +52,7 @@ class App extends Component {
     await projectAPI.deleteOne(id);
     this.setState(
       state => ({
-        project: state.projects.filter(p => p._id !== id)
+        projects: state.projects.filter(p => p._id !== id)
       }),
       () => this.props.history.push("/projects")
     );
