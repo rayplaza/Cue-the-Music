@@ -8,25 +8,18 @@ function ProjectListItem({ project, handleDeleteProject }) {
         <h3 className='panel-title'>{project.cueNum}</h3>
       </div>
       <div className='panel-footer PuppyListItem-action-panel'>
-        <Link
-          className='btn btn-xs btn-info'
-          to={{
-            pathname: '/details',
-            state: { project }
-          }}
-        >
-          DETAILS
         <dl>
-            <dt>Composer</dt>
-            <dd>{project.composer}</dd>
-            <dt>Timecode In</dt>
-            <dd>{project.timecodeIn}</dd>
-            <dt>Timecode Out</dt>
-            <dd>{project.timecodeOut}</dd>
-            <dt>Notes</dt>
-            <dd>{project.note}</dd>
-          </dl>
-        </Link>
+          <dt>Composer</dt>
+          <dd>{project.composer}</dd>
+          <dt>Timecode In</dt>
+          <dd>{project.timecodeIn}</dd>
+          <dt>Timecode Out</dt>
+          <dd>{project.timecodeOut}</dd>
+          <dt>Total Time</dt>
+          <dd>{project.totalTime}</dd>
+          <dt>Notes</dt>
+          <dd>{project.note}</dd>
+        </dl>
         <Link
           className="btn btn-xs btn-warning"
           to={{

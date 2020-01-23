@@ -44,7 +44,7 @@ class App extends Component {
       p._id === updatedProject._id ? updatedProject : p
     );
     this.setState({ projects: newProjectsArray }, () =>
-      this.props.history.push("/")
+      this.props.history.push("/projects")
     );
   };
 
@@ -52,7 +52,6 @@ class App extends Component {
     await projectAPI.deleteOne(id);
     this.setState(
       state => ({
-        // Yay, filter returns a NEW array
         project: state.projects.filter(p => p._id !== id)
       }),
       () => this.props.history.push("/projects")
