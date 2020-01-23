@@ -1,6 +1,17 @@
+
+.ProjectListPage {
+  background-color: #282c34;
+  color: white;
+}
+
 .ProjectListPage-grid {
-  width: 80%;
+  background-color: #282c34;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-gap: 20px;
+}
+
+.fa-plus-square {
+  font-size: 3rem;
 }

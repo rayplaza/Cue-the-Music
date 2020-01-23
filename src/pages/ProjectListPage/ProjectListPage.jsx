@@ -7,8 +7,7 @@ function ProjectListPage(props) {
   return (
     <>
       <h1>Cue Sheet</h1>
-      <NavLink exact to="/add">
-        ADD CUE
+      <NavLink exact to="/add" className="fas fa-plus-square">
       </NavLink>
       <div className="ProjectListPage-grid">
         {props.projects.map(project => (

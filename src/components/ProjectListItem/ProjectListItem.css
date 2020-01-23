@@ -1,0 +1,17 @@
+.card {
+    background-color: #282c34;
+  color: white;
+    border-radius: 0;
+    box-shadow: 5px 5px 15px #e37f28;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+.card:hover {
+    background: #e37f28;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #9E9E9E;
+}
