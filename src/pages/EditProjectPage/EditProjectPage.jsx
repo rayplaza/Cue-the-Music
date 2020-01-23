@@ -27,76 +27,75 @@ class EditProjectPage extends Component {
   };
 
   render() {
-    console.log("THIS IS X: ", this.x);
     return (
       <>
-        <h1>Edit Project</h1>
+        <h1>Edit Cue</h1>
         <form
           ref={this.formRef}
           autoComplete="off"
           onSubmit={this.handleSubmit}
         >
           <div className="form-group">
-            <label>Project Title (required)</label>
+            <label>Cue Number (required)</label>
             <input
               className="form-control"
-              name="projectTitle"
-              value={this.state.formData.projectTitle}
+              name="cueNum"
+              value={this.state.formData.cueNum}
               onChange={this.handleChange}
               required
             />
           </div>
           <div className="form-group">
-            <label>Episode Title</label>
+            <label>Composer</label>
             <input
               className="form-control"
-              name="episodeTitle"
-              value={this.state.formData.episodeTitle}
+              name="composer"
+              value={this.state.formData.composer}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group">
-            <label>Series Type</label>
+            <label>Timecode In</label>
             <input
               className="form-control"
-              name="seriesType"
-              value={this.state.formData.seriesType}
+              name="timecodeIn"
+              value={this.state.formData.timecodeIn}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group">
-            <label>Episode Number</label>
+            <label>Timecode Out</label>
             <input
               className="form-control"
-              name="episodeNum"
-              value={this.state.formData.episodeNum}
+              name="timecodeOut"
+              value={this.state.formData.timecodeOut}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group">
-            <label>Length</label>
+            <label>Total Time</label>
             <input
               className="form-control"
-              name="length"
-              value={this.state.formData.length}
+              name="totalTime"
+              value={this.state.formData.totalTime}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group">
-            <label>Network</label>
+            <label>Notes</label>
             <input
               className="form-control"
-              name="network"
-              value={this.state.formData.network}
+              name="note"
+              value={this.state.formData.note}
               onChange={this.handleChange}
             />
           </div>
           <button
             type="submit"
-            className="btn"
+            className="btn btn-xs"
             disabled={this.state.invalidForm}
           >
-            SAVE PROJECT
+            SAVE CUE
           </button>
           &nbsp;&nbsp;
           <Link to="/projects">CANCEL</Link>

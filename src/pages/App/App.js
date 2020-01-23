@@ -4,13 +4,10 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Redirect, Switch } from "react-router-dom";
 import * as projectAPI from "../../utils/projectService";
-import * as cueAPI from "../../utils/projectService";
 import ProjectListPage from "../../pages/ProjectListPage/ProjectListPage";
-import CueListPage from "../../pages/CueListPage/CueListPage";
 import MainPage from "../MainPage/MainPage";
 import EditProjectPage from "../EditProjectPage/EditProjectPage";
 import AddProjectPage from "../../pages/AddProjectPage/AddProjectPage";
-import AddCuePage from "../../pages/AddCuePage/AddCuePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
@@ -38,16 +35,6 @@ class App extends Component {
         projects: [...state.projects, newProj]
       }),
       () => this.props.history.push("/projects")
-    );
-  };
-
-  handleAddCue = async newCueData => {
-    const newCue = await cueAPI.create(newCueData);
-    this.setState(
-      state => ({
-        projects: [...state.projects, newCue]
-      }),
-      () => this.props.history.push("/cues")
     );
   };
 
@@ -104,18 +91,6 @@ class App extends Component {
             path="/add"
             render={() => (
               <AddProjectPage handleAddProject={this.handleAddProject} />
-            )}
-          />
-          <Route
-            exact
-            path="/addCue"
-            render={({ location }) => <AddCuePage location={location} />}
-          />
-          <Route
-            exact
-            path="/cues"
-            render={({ location }) => (
-              <CueListPage projects={this.state.projects} location={location} />
             )}
           />
           <Route

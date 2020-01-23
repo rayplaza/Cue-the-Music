@@ -7,7 +7,6 @@ require("dotenv").config();
 require("./config/database");
 
 var projectsRouter = require("./routes/api/projects");
-var cuesRouter = require("./routes/api/cues");
 
 var app = express();
 
@@ -21,7 +20,6 @@ app.use(express.static(path.join(__dirname, "build")));
 app.use("/api/users", require("./routes/api/users"));
 app.use(require("./config/auth"));
 app.use("/api/projects", projectsRouter);
-app.use("/api/cues", cuesRouter);
 
 app.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));

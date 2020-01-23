@@ -5,13 +5,13 @@ function ProjectListItem({ project, handleDeleteProject }) {
   return (
     <div className="panel panel-default">
       <div className="panel-heading">
-        <h3 className="panel-title">{project.name}</h3>
+        <h3 className="panel-title">{project.cueNum}</h3>
       </div>
-      <div className="panel-footer ProjectListItem-action-panel">
+      <div className="panel-footer PuppyListItem-action-panel">
         <Link
           className="btn btn-xs btn-info"
           to={{
-            pathname: "/cues",
+            pathname: "/details",
             state: { project }
           }}
         >

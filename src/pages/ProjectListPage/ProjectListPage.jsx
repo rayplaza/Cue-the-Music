@@ -6,9 +6,9 @@ import ProjectListItem from "../../components/ProjectListItem/ProjectListItem";
 function ProjectListPage(props) {
   return (
     <>
-      <h1>Projects</h1>
+      <h1>Cue Sheet</h1>
       <NavLink exact to="/add">
-        ADD PROJECT
+        ADD CUE
       </NavLink>
       <div className="ProjectListPage-grid">
         {props.projects.map(project => (

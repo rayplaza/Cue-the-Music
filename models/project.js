@@ -1,28 +1,13 @@
 const mongoose = require("mongoose");
 
-const cueSchema = new mongoose.Schema(
+const projectSchema = new mongoose.Schema(
   {
-    cueNum: Number,
+    cueNum: String,
     composer: String,
     timecodeIn: String,
     timecodeOut: String,
     totalTime: String,
-    notes: String
-  },
-  {
-    timestamps: true
-  }
-);
-
-const projectSchema = new mongoose.Schema(
-  {
-    projectTitle: String,
-    episodeTitle: String,
-    seriesType: String,
-    episodeNum: String,
-    length: String,
-    network: String,
-    cues: [cueSchema]
+    note: String
   },
   {
     timestamps: true
