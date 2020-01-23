@@ -7,33 +7,42 @@ function ProjectListItem({ project, handleDeleteProject }) {
       <div className="panel-heading">
         <h3 className='panel-title'>{project.cueNum}</h3>
       </div>
-      <div className='panel-body'>
+      <div className='panel-footer PuppyListItem-action-panel'>
+        <Link
+          className='btn btn-xs btn-info'
+          to={{
+            pathname: '/details',
+            state: { project }
+          }}
+        >
+          DETAILS
         <dl>
-          <dt>Composer</dt>
-          <dd>{project.composer}</dd>
-          <dt>Timecode In</dt>
-          <dd>{project.timecodeIn}</dd>
-          <dt>Timecode Out</dt>
-          <dd>{project.timecodeOut}</dd>
-          <dt>Notes</dt>
-          <dd>{project.note}</dd>
-        </dl>
-      </div>
-      <Link
-        className="btn btn-xs btn-warning"
-        to={{
-          pathname: "/edit",
-          state: { project }
-        }}
-      >
-        EDIT
+            <dt>Composer</dt>
+            <dd>{project.composer}</dd>
+            <dt>Timecode In</dt>
+            <dd>{project.timecodeIn}</dd>
+            <dt>Timecode Out</dt>
+            <dd>{project.timecodeOut}</dd>
+            <dt>Notes</dt>
+            <dd>{project.note}</dd>
+          </dl>
         </Link>
-      <button
-        className="btn btn-xs btn-danger margin-left-10"
-        onClick={() => handleDeleteProject(project._id)}
-      >
-        DELETE
+        <Link
+          className="btn btn-xs btn-warning"
+          to={{
+            pathname: "/edit",
+            state: { project }
+          }}
+        >
+          EDIT
+        </Link>
+        <button
+          className="btn btn-xs btn-danger margin-left-10"
+          onClick={() => handleDeleteProject(project._id)}
+        >
+          DELETE
         </button>
+      </div>
     </div>
   );
 }
