@@ -92,10 +92,9 @@ class EditProjectPage extends Component {
           </div>
           <button
             type="submit"
-            className="btn btn-xs"
+            className="far fa-save"
             disabled={this.state.invalidForm}
           >
-            SAVE CUE
           </button>
           &nbsp;&nbsp;
           <Link to="/projects">CANCEL</Link>
