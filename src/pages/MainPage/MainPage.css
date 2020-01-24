@@ -2,3 +2,13 @@
     background-color: #282c34;
   color: white;
 }
+
+.logo {
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
