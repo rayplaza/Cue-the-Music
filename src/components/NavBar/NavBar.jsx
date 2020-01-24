@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import Logosolo from "../../img/logosolo.png";
 
 const NavBar = props => {
   let nav = props.user ? (
     <div>
+      <Link to="/" className="NavLogo"><img src={Logosolo} alt="navlogo" /></Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="/projects" className="NavBar-link">
         PROJECTS
       </Link>

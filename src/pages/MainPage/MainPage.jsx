@@ -5,7 +5,7 @@ import Logo from '../../img/logotransback.png';
 
 var sectionStyle = {
   width: "100%",
-  height: "100vh",
+  height: "93vh",
   backgroundImage: `url(${Background})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',

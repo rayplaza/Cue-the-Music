@@ -94,10 +94,9 @@ class AddProjectPage extends Component {
           </div>
           <button
             type="submit"
-            className="btn"
+            className="far fa-save"
             disabled={this.state.invalidForm}
           >
-            Add Cue
           </button>
         </form>
       </>
