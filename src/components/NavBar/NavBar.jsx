@@ -16,7 +16,7 @@ const NavBar = props => {
         LOG OUT
       </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <span className="NavBar-welcome">Bienvenidos, {props.user.name}</span>
+      <span className="NavBar-welcome">Bienvenido, {props.user.name}</span>
     </div>
   ) : (
       <div>
