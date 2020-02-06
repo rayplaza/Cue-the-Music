@@ -28,10 +28,10 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
-        <header className="header-footer">Log In</header>
+        <header className="header-footer text-center">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <div className="col-sm-3">
+            <div className="col-sm-3 mx-auto">
               <input
                 type="email"
                 className="form-control"
@@ -43,7 +43,7 @@ class LoginPage extends Component {
             </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-3">
+            <div className="col-sm-3 mx-auto">
               <input
                 type="password"
                 className="form-control"
