@@ -35,7 +35,7 @@ class EditProjectPage extends Component {
           autoComplete="off"
           onSubmit={this.handleSubmit}
         >
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Cue Number (required)</label>
             <input
               className="form-control"
@@ -45,7 +45,7 @@ class EditProjectPage extends Component {
               required
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Composer</label>
             <input
               className="form-control"
@@ -54,7 +54,7 @@ class EditProjectPage extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Timecode In</label>
             <input
               className="form-control"
@@ -63,7 +63,7 @@ class EditProjectPage extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Timecode Out</label>
             <input
               className="form-control"
@@ -72,7 +72,7 @@ class EditProjectPage extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Total Time</label>
             <input
               className="form-control"
@@ -81,23 +81,25 @@ class EditProjectPage extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group col-sm-3 mx-auto">
             <label>Notes</label>
-            <input
+            <textarea
               className="form-control"
               name="note"
               value={this.state.formData.note}
               onChange={this.handleChange}
             />
           </div>
-          <button
-            type="submit"
-            className="far fa-save"
-            disabled={this.state.invalidForm}
-          >
-          </button>
+          <div className="text-center">
+            <button
+              type="submit"
+              className="far fa-save"
+              disabled={this.state.invalidForm}
+            >
+            </button>Save
           &nbsp;&nbsp;
           <Link to="/projects">CANCEL</Link>
+          </div>
         </form>
       </>
     );
