@@ -31,7 +31,7 @@ class AddProjectPage extends Component {
   render() {
     return (
       <>
-        <h1>Add Cue</h1>
+        <h1 className="text-center">Add Cue</h1>
         <form
           ref={this.formRef}
           autoComplete="off"

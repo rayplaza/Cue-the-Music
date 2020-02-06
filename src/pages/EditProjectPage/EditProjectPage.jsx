@@ -29,7 +29,7 @@ class EditProjectPage extends Component {
   render() {
     return (
       <>
-        <h1>Edit Cue</h1>
+        <h1 className="text-center">Edit Cue</h1>
         <form
           ref={this.formRef}
           autoComplete="off"
