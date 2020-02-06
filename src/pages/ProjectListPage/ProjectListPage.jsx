@@ -8,7 +8,7 @@ function ProjectListPage(props) {
     <>
       <h1>Cue Sheet</h1>
       <NavLink exact to="/add" className="fas fa-plus-square">
-      </NavLink>
+      </NavLink>Add a cue
       <div className="ProjectListPage-grid">
         {props.projects.map(project => (
           <ProjectListItem
