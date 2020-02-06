@@ -15,7 +15,6 @@ function getUserFromToken() {
 }
 
 function getToken() {
-  console.log("Hitting getToken function");
   let token = localStorage.getItem("token");
   if (token) {
     const payload = JSON.parse(atob(token.split(".")[1]));

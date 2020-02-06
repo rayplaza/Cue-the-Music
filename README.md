@@ -23,5 +23,5 @@ This app can be used by composers, music editors, or anyone else looking to keep
 ## Unsolved Problems
 The ability to create multiple projects is in the works. No other issues present.
 
-## Future Enchancements
+## Future Enhancements
 On top of the ability to create projects. The Total Time will be calculated when both timecodes are entered for ease of use. Also the ability to mark the cue with different checkboxes, such as "done" "delivered" "working on" or "new" will be in future updates of the app. 
