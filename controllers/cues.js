@@ -6,8 +6,8 @@ module.exports = {
 
 
 async function create(req, res) {
-    const user = await Project.findOne({ "_id": req.project._id });
+    const project = await Project.findOne({ "_id": req.project._id });
     project.cues.push(req.body)
     project.save()
-    res.status(200).json(user);
+    res.status(200).json(project);
 }
