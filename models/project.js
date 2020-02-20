@@ -1,8 +1,20 @@
 const mongoose = require("mongoose");
 
+const cueSchema = new mongoose.Schema({
+  cueNum: String,
+  composer: String,
+  timecodeIn: String,
+  timecodeOut: String,
+  totalTime: String,
+  note: String
+}, {
+  timestamps: true
+}
+);
+
 const projectSchema = new mongoose.Schema(
   {
-    cueNum: String,
+    projectName: String,
     composer: String,
     timecodeIn: String,
     timecodeOut: String,
