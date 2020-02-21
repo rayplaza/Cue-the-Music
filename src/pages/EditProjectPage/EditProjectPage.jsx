@@ -29,64 +29,64 @@ class EditProjectPage extends Component {
   render() {
     return (
       <>
-        <h1 className="text-center">Edit Cue</h1>
+        <h1 className="text-center">Edit Project</h1>
         <form
           ref={this.formRef}
           autoComplete="off"
           onSubmit={this.handleSubmit}
         >
           <div className="form-group col-sm-3 mx-auto">
-            <label>Cue Number (required)</label>
+            <label>Project Title (required)</label>
             <input
               className="form-control"
-              name="cueNum"
-              value={this.state.formData.cueNum}
+              name="projectTitle"
+              value={this.state.formData.projectTitle}
               onChange={this.handleChange}
               required
             />
           </div>
           <div className="form-group col-sm-3 mx-auto">
-            <label>Composer</label>
+            <label>Episode Title</label>
             <input
               className="form-control"
-              name="composer"
-              value={this.state.formData.composer}
+              name="episodeTitle"
+              value={this.state.formData.episodeTitle}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group col-sm-3 mx-auto">
-            <label>Timecode In</label>
+            <label>Series Type</label>
             <input
               className="form-control"
-              name="timecodeIn"
-              value={this.state.formData.timecodeIn}
+              name="seriesType"
+              value={this.state.formData.seriesType}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group col-sm-3 mx-auto">
-            <label>Timecode Out</label>
+            <label>Episode Number</label>
             <input
               className="form-control"
-              name="timecodeOut"
-              value={this.state.formData.timecodeOut}
+              name="episodeNum"
+              value={this.state.formData.episodeNum}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group col-sm-3 mx-auto">
-            <label>Total Time</label>
+            <label>Length</label>
             <input
               className="form-control"
-              name="totalTime"
-              value={this.state.formData.totalTime}
+              name="length"
+              value={this.state.formData.length}
               onChange={this.handleChange}
             />
           </div>
           <div className="form-group col-sm-3 mx-auto">
-            <label>Notes</label>
+            <label>Network</label>
             <textarea
               className="form-control"
-              name="note"
-              value={this.state.formData.note}
+              name="network"
+              value={this.state.formData.network}
               onChange={this.handleChange}
             />
           </div>
