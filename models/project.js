@@ -19,7 +19,7 @@ const projectSchema = new mongoose.Schema(
     projectTitle: String,
     episodeTitle: String,
     seriesType: String,
-    episodeNum: String,
+    episodeNum: Number,
     length: String,
     network: String,
     cues: [cueSchema]
