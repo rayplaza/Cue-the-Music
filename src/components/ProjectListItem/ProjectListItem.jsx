@@ -8,19 +8,19 @@ function ProjectListItem({ project, handleDeleteProject }) {
       <div className="col-lg-10 col-md-3">
         <div className="card">
           <div className='card-body'>
-            <h3 className='panel-title'>{project.cueNum}</h3>
+            <h3 className='panel-title'>{project.projectTitle}</h3>
             <dl className='row'>
-              <dt className='col-md-auto text-warning'>Composer</dt>
-              <dd>{project.composer}</dd>
-              <dt className='col-md-auto text-warning'>Timecode In</dt>
-              <dd>{project.timecodeIn}</dd>
-              <dt className='col-md-auto text-warning'>Timecode Out</dt>
-              <dd>{project.timecodeOut}</dd>
-              <dt className='col-md-auto text-warning'>Total Time</dt>
-              <dd>{project.totalTime}</dd>
+              <dt className='col-md-auto text-warning'>Episode Title</dt>
+              <dd>{project.episodeTitle}</dd>
+              <dt className='col-md-auto text-warning'>Series Type</dt>
+              <dd>{project.seriesType}</dd>
+              <dt className='col-md-auto text-warning'>Episode Number</dt>
+              <dd>{project.episodeNum}</dd>
+              <dt className='col-md-auto text-warning'>length</dt>
+              <dd>{project.length}</dd>
               <div>
-                <dt className='col-md-auto text-warning'>Notes</dt>
-                <dd className='col-md-auto'>{project.note}</dd>
+                <dt className='col-md-auto text-warning'>Network</dt>
+                <dd>{project.network}</dd>
               </div>
             </dl>
             <Link
