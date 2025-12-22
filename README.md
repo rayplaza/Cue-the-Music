@@ -1,7 +1,7 @@
 # Cue the Music App
 
 ## Description
-Cue the music is a music cue sheet creator for music in film. It allows you to input the information of each cue including cue number, which composoer is working on the cue, timecode, total time and notes. 
+Cue the music is a music cue sheet creator for music in film. It allows you to input the information of each cue including cue number, which composer is working on the cue, timecode, total time and notes. 
 
 This app can be used by composers, music editors, or anyone else looking to keep track of thier cues.
 
